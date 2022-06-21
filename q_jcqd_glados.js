@@ -59,7 +59,7 @@ async function getUserInfo(cookie) {
     let res = await axios.get(url, {headers: {"Cookie": cookie}})
     if (!res) return;
     if (res.code === 0) {
-        $.logAndNotify(`\n\n============================================`)
+        $.logAndNotify(`\n\n===============================`)
         $.logAndNotify(`当前账号：${res.data.email}`)
         $.logAndNotify(`剩余天数：${res.data.days} 天`)
         $.logAndNotify(`流量情况：${(res.data.traffic / 1024 / 1024 / 1024).toFixed(2)} GB /  ${res.data.vip} GB`)
